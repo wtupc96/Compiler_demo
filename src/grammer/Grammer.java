@@ -37,8 +37,8 @@ public class Grammer {
     public static final ArrayList<Step> stateTableS = new ArrayList<>();
     public static final ArrayList<ArrayList<Step>> stateTable = new ArrayList<>();
     public static final String[] generators = {
-            "B=F;", "identifierC", "[D]", "episilon", "FE", ",F", "episilon", "++FG", "--FG", "(F)G", "-FG", "identifierG", "constantG",
-            "HG", "episilon", "+F", "-F", "*F", "classJ;", "BK", ",B", "episilon", "identifier(J);", "if(O)then{V}N", "else{V}", "episilon",
+            "B=F;", "identifierC", "[D]", "episilon", "FE", ",FE", "episilon", "++FG", "--FG", "(F)G", "-FG", "identifierG", "constantG",
+            "HG", "episilon", "+F", "-F", "*F", "classJ;", "BK", ",BK", "episilon", "identifier(J);", "if(O)then{V}N", "else{V}", "episilon",
             "!OP", "(O)P", "BropBP", "TRUEP", "FALSEP", "QP", "episilon", "&O", "|G", "switch(B){R}", "caseB:{V}S", "caseB:{V}S", "episilon",
             "while(O)do{V}", "do{V}while(O);", "UV", "episilon", "A", "I", "L", "M", "T"
     };
@@ -84,7 +84,7 @@ public class Grammer {
             stateTableF.add(new Step("constant", 12));
         }
         {
-            stateTableF2.add(new Step("++", 14));
+            stateTableF2.add(new Step("]", 14));
             stateTableF2.add(new Step(")", 14));
             stateTableF2.add(new Step("+", 13));
             stateTableF2.add(new Step("-", 13));
@@ -147,6 +147,7 @@ public class Grammer {
         }
         {
             stateTableM.add(new Step("identifier=", 43));
+            stateTableM.add(new Step("identifier[", 43));
             stateTableM.add(new Step("identifier(", 45));
             stateTableM.add(new Step("class", 44));
             stateTableM.add(new Step("if", 46));
@@ -191,7 +192,7 @@ public class Grammer {
 
     public static void main(String[] args) {
         init();
-        input("while(a != b) do {if(a > b) then {x = x + ++y;} else{a = b;}");
+        input("do{x=y;}while(z<x);");
         Scan.handle();
         setKvMapArrayList();
         System.out.println(handle());
@@ -288,8 +289,8 @@ public class Grammer {
                 String temp = input;
                 boolean flag = false;
                 if (top.equals("U") && input.equals("identifier")) {
-                    input += kvMapArrayList.get(k + 1).value;
-                    flag = true;
+                        input += kvMapArrayList.get(k + 1).value;
+                        flag = true;
                 }
                 ArrayList<Step> row = stateTable.get(top.toCharArray()[0] - 'A');
                 int i = 0;
@@ -328,9 +329,8 @@ public class Grammer {
                                         analyseStack.push("FALSE");
                                         j = j - 4;
                                     }
-                                } else {
-                                    analyseStack.push(new String(strChar, j, 1));
                                 }
+                                    analyseStack.push(new String(strChar, j, 1));
                             } else {
                                 if (j - 1 >= 0 && (new String(strChar, j - 1, 2).equals("++") || new String(strChar, j - 1, 2).equals("--"))) {
                                     analyseStack.push(new String(strChar, j - 1, 2));
@@ -408,7 +408,7 @@ public class Grammer {
                         ++k;
                         break;
                     case "class":
-                        if (kvMapArrayList.get(k).classi.equals("class")) {
+                        if (kvMapArrayList.get(k).type >= 1 && kvMapArrayList.get(k).type <= 4) {
                             analyseStack.pop();
                         } else {
                             System.out.println("Not a class!");
