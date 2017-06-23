@@ -1,13 +1,11 @@
 package grammer;
 
 import lexical.KVMap;
-import lexical.Scan;
 
 import java.util.ArrayList;
 import java.util.Stack;
 
 import static lexical.Scan.getResultList;
-import static lexical.Scan.input;
 
 /**
  * Created by Administrator on 2017/6/14.
@@ -39,7 +37,7 @@ public class Grammer {
     public static final String[] generators = {
             "B=F;", "identifierC", "[D]", "episilon", "FE", ",FE", "episilon", "++FG", "--FG", "(F)G", "-FG", "identifierG", "constantG",
             "HG", "episilon", "+F", "-F", "*F", "classJ;", "BK", ",BK", "episilon", "identifier(J);", "if(O)then{V}N", "else{V}", "episilon",
-            "!OP", "(O)P", "BropBP", "TRUEP", "FALSEP", "QP", "episilon", "&O", "|G", "switch(B){R}", "caseB:{V}S", "caseB:{V}S", "episilon",
+            "!OP", "(O)P", "BropBP", "TRUEP", "FALSEP", "QP", "episilon", "&O", "|O", "switch(B){R}", "caseB:{V}S", "caseB:{V}S", "episilon",
             "while(O)do{V}", "do{V}while(O);", "UV", "episilon", "A", "I", "L", "M", "T"
     };
     public static ArrayList<KVMap> kvMapArrayList;
@@ -138,7 +136,7 @@ public class Grammer {
             stateTableK.add(new Step("case", 36));
         }
         {
-            stateTableK2.add(new Step("case", 38));
+            stateTableK2.add(new Step("case", 37));
             stateTableK2.add(new Step("}", 38));
         }
         {
@@ -190,23 +188,31 @@ public class Grammer {
         }
     }
 
-    public static void main(String[] args) {
-        init();
-        input("do{x=y;}while(z<x);");
-        Scan.handle();
-        setKvMapArrayList();
-        System.out.println(handle());
-        System.out.println(analyseStack);
-//        for (ArrayList<Step> state : stateTable) {
-//            for (Step s : state) {
-//                System.out.println(s.input + "    " + s.stepTo);
-//            }
-//            System.out.println();
-//        }
-
-//        System.out.println(stateTable);
-//        System.out.println(generators.length);
-    }
+//    public static void main(String[] args) {
+//        init();
+//        input("switch(a){" +
+//                "case b:{" +
+//                "x = y;}" +
+//                "case c:{" +
+//                "}" +
+//                "case c:{" +
+//                "}" +
+//                "case c:{" +
+//                "}" +
+//                "}");
+//        Scan.handle();
+//        setKvMapArrayList();
+//        System.out.println(handle());
+////        for (ArrayList<Step> state : stateTable) {
+////            for (Step s : state) {
+////                System.out.println(s.input + "    " + s.stepTo);
+////            }
+////            System.out.println();
+////        }
+//
+////        System.out.println(stateTable);
+////        System.out.println(generators.length);
+//    }
 
     public static void setKvMapArrayList() {
         Grammer.kvMapArrayList = getResultList();
@@ -281,16 +287,15 @@ public class Grammer {
                     }
                     break;
             }
-            String top = analyseStack.pop();
-            analyseStack.push(top);
+            String top = analyseStack.elementAt(analyseStack.size() - 1);
 
-            if (Character.isUpperCase(top.toCharArray()[0])) {
+            if (!top.equals("TRUE") && !top.equals("FALSE") && Character.isUpperCase(top.toCharArray()[0])) {
                 analyseStack.pop();
                 String temp = input;
                 boolean flag = false;
                 if (top.equals("U") && input.equals("identifier")) {
-                        input += kvMapArrayList.get(k + 1).value;
-                        flag = true;
+                    input += kvMapArrayList.get(k + 1).value;
+                    flag = true;
                 }
                 ArrayList<Step> row = stateTable.get(top.toCharArray()[0] - 'A');
                 int i = 0;
@@ -329,8 +334,9 @@ public class Grammer {
                                         analyseStack.push("FALSE");
                                         j = j - 4;
                                     }
-                                }
+                                } else {
                                     analyseStack.push(new String(strChar, j, 1));
+                                }
                             } else {
                                 if (j - 1 >= 0 && (new String(strChar, j - 1, 2).equals("++") || new String(strChar, j - 1, 2).equals("--"))) {
                                     analyseStack.push(new String(strChar, j - 1, 2));
@@ -343,8 +349,7 @@ public class Grammer {
                     }
                 }
             } else {
-                String over = analyseStack.pop();
-                analyseStack.push(over);
+                String over = analyseStack.elementAt(analyseStack.size() - 1);
                 switch (over) {
                     case "++":
                     case "--":
@@ -419,11 +424,23 @@ public class Grammer {
                 }
             }
         }
-        if(analyseStack.size() == 1){
-            if(analyseStack.pop().equals("V")){
-                return true;
+        System.out.println(analyseStack);
+        while (!analyseStack.empty()) {
+            switch (analyseStack.pop()) {
+                case "C":
+                case "E":
+                case "G":
+                case "K":
+                case "N":
+                case "P":
+                case "V":
+                    System.out.println(analyseStack);
+                    break;
+                default:
+                    System.out.println(analyseStack);
+                    return false;
             }
         }
-        return false;
+        return true;
     }
 }
