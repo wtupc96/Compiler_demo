@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27cd02e9-8bcf-4943-92b7-6d270d9569b5" name="Default" comment="">
+    <list default="true" id="27cd02e9-8bcf-4943-92b7-6d270d9569b5" name="Default" comment="Ready.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/semantic/QuaternionList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/semantic/Semantic.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/semantic/TableItems.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grammer/Grammer.java" afterPath="$PROJECT_DIR$/src/grammer/Grammer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lexical/Scan.java" afterPath="$PROJECT_DIR$/src/lexical/Scan.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -37,21 +40,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="KVMap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lexical/KVMap.java">
+      <file leaf-file-name="Semantic.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/semantic/Semantic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="240">
+              <caret line="10" column="81" lean-forward="false" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuaternionList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/semantic/QuaternionList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="11" column="103" lean-forward="false" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Grammer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/grammer/Grammer.java">
+      <file leaf-file-name="TableItems.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/semantic/TableItems.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="189" column="8" lean-forward="false" selection-start-line="189" selection-start-column="8" selection-end-line="189" selection-end-column="8" />
+            <state relative-caret-position="192">
+              <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scan.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lexical/Scan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="235" column="34" lean-forward="false" selection-start-line="235" selection-start-column="34" selection-end-line="235" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,6 +89,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -101,8 +127,13 @@
         <option value="$PROJECT_DIR$/src/lexical/exception/UnknownIdentifierException.java" />
         <option value="$PROJECT_DIR$/src/lexical/KVMap.java" />
         <option value="$PROJECT_DIR$/src/grammer/Step.java" />
-        <option value="$PROJECT_DIR$/src/lexical/Scan.java" />
         <option value="$PROJECT_DIR$/src/grammer/Grammer.java" />
+        <option value="$PROJECT_DIR$/src/semantic/TableItemType.java" />
+        <option value="$PROJECT_DIR$/src/lexical/Scan.java" />
+        <option value="$PROJECT_DIR$/src/semantic/SymbolTable.java" />
+        <option value="$PROJECT_DIR$/src/semantic/TableItems.java" />
+        <option value="$PROJECT_DIR$/src/semantic/QuaternionList.java" />
+        <option value="$PROJECT_DIR$/src/semantic/Semantic.java" />
       </list>
     </option>
   </component>
@@ -164,6 +195,10 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="semantic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -180,6 +215,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lexical" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -205,7 +254,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Grammer">
+  <component name="RunManager" selected="Application.Scan">
     <configuration default="false" name="Scan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -640,8 +689,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Grammer" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Scan" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Scan" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Grammer" />
       </list>
     </recent_temporary>
   </component>
@@ -672,7 +721,7 @@
       <workItem from="1497451160222" duration="132000" />
       <workItem from="1497453264905" duration="3450000" />
       <workItem from="1497945743007" duration="34000" />
-      <workItem from="1498198637822" duration="14719000" />
+      <workItem from="1498198637822" duration="16216000" />
     </task>
     <task id="LOCAL-00001" summary="Fix bugs.">
       <created>1497456598119</created>
@@ -688,11 +737,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498203980165</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Error detection.">
+      <created>1498221705084</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1498221705084</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49047000" />
+    <option name="totallyTimeSpent" value="50544000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -725,11 +781,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31536388" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31536388" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16404012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -755,7 +811,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix bugs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix bugs." />
+    <MESSAGE value="Error detection." />
+    <option name="LAST_COMMIT_MESSAGE" value="Error detection." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1129,10 +1186,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lexical/Scan.java">
+    <entry file="file://$PROJECT_DIR$/src/grammer/Grammer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="230" column="40" lean-forward="false" selection-start-line="230" selection-start-column="40" selection-end-line="230" selection-end-column="40" />
+        <state relative-caret-position="4536">
+          <caret line="189" column="8" lean-forward="false" selection-start-line="189" selection-start-column="8" selection-end-line="189" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1147,10 +1204,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/grammer/Grammer.java">
+    <entry file="file://$PROJECT_DIR$/src/semantic/TableItemType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="189" column="8" lean-forward="false" selection-start-line="189" selection-start-column="8" selection-end-line="189" selection-end-column="8" />
+        <state relative-caret-position="144">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lexical/Scan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="235" column="34" lean-forward="false" selection-start-line="235" selection-start-column="34" selection-end-line="235" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/semantic/SymbolTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/semantic/TableItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/semantic/QuaternionList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="103" lean-forward="false" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/semantic/Semantic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="81" lean-forward="false" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

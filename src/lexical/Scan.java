@@ -13,6 +13,7 @@ public class Scan {
     private static StringBuffer currentWord = new StringBuffer();
     private static int type = -1;
     private static int row = 1;
+    private static boolean result = true;
 
     public static ArrayList<KVMap> getResultList() {
         return resultList;
@@ -22,7 +23,7 @@ public class Scan {
         proc = prog.toCharArray();
     }
 
-    public static void handle() {
+    public static boolean handle() {
         int length = proc.length;
         for (int i = 0; i < length; ++i) {
             while (i < length && (proc[i] == ' ' || proc[i] == '\n' || proc[i] == '\t')) {
@@ -46,6 +47,7 @@ public class Scan {
                             if (i + 1 < length) {
                                 currentWord.append(proc[i + 1]);
                             } else {
+                                result = false;
                                 type = -1;
                                 currentWord = new StringBuffer("No character.");
                             }
@@ -53,6 +55,7 @@ public class Scan {
                                 currentWord.append(proc[i + 2]);
                                 i = i + 2;
                             } else {
+                                result = false;
                                 type = -1;
                                 currentWord = new StringBuffer("Not a pair of single quotes.");
                             }
@@ -134,6 +137,7 @@ public class Scan {
                             type = 41;
                             break;
                         default:
+                            result = false;
                             type = -1;
                             currentWord = new StringBuffer("Unsupported character: " + proc[i]);
                     }
@@ -142,6 +146,7 @@ public class Scan {
                 }
             }
         }
+        return result;
     }
 
     private static int handleNumberOrMinus(int i, int length) {
@@ -229,7 +234,7 @@ public class Scan {
 
     public static void main(String[] args) {
         input("while(a != b) do {x = y;}");
-        handle();
+        System.out.println(handle());
         printLexicalResult();
     }
 
