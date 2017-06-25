@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27cd02e9-8bcf-4943-92b7-6d270d9569b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tools/CalculatePostfix.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grammer/Grammer.java" afterPath="$PROJECT_DIR$/src/grammer/Grammer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/semantic/Semantic.java" afterPath="$PROJECT_DIR$/src/semantic/Semantic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/semantic/TableItems.java" afterPath="$PROJECT_DIR$/src/semantic/TableItems.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -762,7 +758,7 @@
       <workItem from="1497453264905" duration="3450000" />
       <workItem from="1497945743007" duration="34000" />
       <workItem from="1498198637822" duration="22229000" />
-      <workItem from="1498374987755" duration="12610000" />
+      <workItem from="1498374987755" duration="12642000" />
     </task>
     <task id="LOCAL-00001" summary="Fix bugs.">
       <created>1497456598119</created>
@@ -792,11 +788,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498223184405</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Symbol table.">
+      <created>1498399161777</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1498399161777</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69167000" />
+    <option name="totallyTimeSpent" value="69199000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -809,7 +812,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -862,7 +864,8 @@
     <MESSAGE value="Fix bugs." />
     <MESSAGE value="Error detection." />
     <MESSAGE value="Ready." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ready." />
+    <MESSAGE value="Symbol table." />
+    <option name="LAST_COMMIT_MESSAGE" value="Symbol table." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
