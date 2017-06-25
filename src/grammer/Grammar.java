@@ -11,12 +11,12 @@ import java.util.Stack;
 import static lexical.Scan.getResultList;
 import static lexical.Scan.input;
 import static semantic.Semantic.*;
-import static tools.CalculatePostfix.calculate;
+import static tools.CalculatePostfix.*;
 
 /**
  * Created by Administrator on 2017/6/14.
  */
-public class Grammer {
+public class Grammar {
     private static final ArrayList<Step> stateTableA = new ArrayList<>();
     private static final ArrayList<Step> stateTableH = new ArrayList<>();
     private static final ArrayList<Step> stateTableX = new ArrayList<>();
@@ -78,12 +78,15 @@ public class Grammer {
     private static ArrayList<ArrayList<Integer>> dopeVector;
     private static int listNumber = 0;
     private static int line = 0;
+    private static int quaternionNumber = 100;
+    private static int tempVariableNumber = 0;
     private static boolean result = true;
     private static int typeInTable;
     private static boolean hasMoreArgs = false;
 
-    public static void setDopeVector() {
-        Grammer.dopeVector = getDopeVectorList();
+
+    private static void setDopeVector() {
+        Grammar.dopeVector = getDopeVectorList();
     }
 
     private static void init() {
@@ -355,7 +358,7 @@ public class Grammer {
 
     public static void main(String[] args) {
         init();
-        input("int a; a = 3;int ab[a+3+4,++2,--3,--3],c[1,2+3,4*--5];");
+        input("int a,b; a = (++3 + 1) * (2 - (--1));");
         Scan.handle();
         setKvMapArrayList();
         setQuaternionLists();
@@ -367,18 +370,19 @@ public class Grammer {
         System.out.println(calIndex);
         System.out.println(arrayIndex);
         System.out.println(dopeVector);
+        System.out.println(quaternionLists);
     }
 
     private static void setKvMapArrayList() {
-        Grammer.kvMapArrayList = getResultList();
+        Grammar.kvMapArrayList = getResultList();
     }
 
     private static void setQuaternionLists() {
-        Grammer.quaternionLists = getQuaternions();
+        Grammar.quaternionLists = getQuaternions();
     }
 
     private static void setSymbolTable() {
-        Grammer.symbolTable = getSymbolTable();
+        Grammar.symbolTable = getSymbolTable();
     }
 
     private static boolean handle() {
@@ -560,6 +564,7 @@ public class Grammer {
                         case "identifier":
                             if (kvMapArrayList.get(k).classi.equals("identifier")) {
                                 analyseStack.pop();
+                                handleDefineAndAssignment(k);
                             } else {
                                 result = false;
                                 System.out.println("Not an identifier!");
@@ -611,6 +616,30 @@ public class Grammer {
             return false;
         }
         return result;
+    }
+
+    private static void handleDefineAndAssignment(int k) {
+        if (hasMoreArgs) {
+            fillInSymbolTable(k);
+        } else if (k + 1 < kvMapArrayList.size()) {
+            int i = 0;
+            String value = kvMapArrayList.get(k).value;
+            for (; i < symbolTable.size(); ++i) {
+                if (symbolTable.get(i).name.equals(value)) {
+                    break;
+                }
+            }
+            if (i == symbolTable.size()) {
+                System.out.println("Variable \"" + value + "\" has not been defined.");
+            } else {
+                if (kvMapArrayList.get(k + 1).value.equals("=")) {
+                    calculateSimpleVariableAssignment(k, i);
+                }
+                if (kvMapArrayList.get(k + 1).value.equals("[")) {
+                    calculateArrayAssignment(k);
+                }
+            }
+        }
     }
 
     private static String handleDelimiter(String input, int k) {
@@ -673,33 +702,38 @@ public class Grammer {
     private static String handleIdentifier(int k) {
         String input;
         input = "identifier";
-        if (hasMoreArgs) {
-            fillInSymbolTable(k);
-        } else if (k + 1 < kvMapArrayList.size()) {
-            int i = 0;
-            String value = kvMapArrayList.get(k).value;
-            for (; i < symbolTable.size(); ++i) {
-                if (symbolTable.get(i).name.equals(value)) {
-                    break;
-                }
-            }
-            if (i == symbolTable.size()) {
-                System.out.println("Variable \"" + value + "\" has not been defined.");
-            } else {
-                if (kvMapArrayList.get(k + 1).value.equals("=")) {
-                    calculateSimpleVariableAssignment(k, i);
-                }
-                if (kvMapArrayList.get(k + 1).value.equals("[")) {
-                    calculateArrayAssignment(k);
-                }
-            }
 
-        }
         return input;
     }
 
     private static void calculateSimpleVariableAssignment(int k, int i) {
-        symbolTable.get(i).value = kvMapArrayList.get(k + 2).value;
+        ArrayList<String> temp = new ArrayList<>();
+        for (int j = k + 1; j < kvMapArrayList.size(); ++j) {
+            String symbol = kvMapArrayList.get(j).value;
+            char begin = symbol.toCharArray()[0];
+            if (!(symbol.equals(",") || symbol.equals(";"))) {
+                if ((begin >= 'a' && begin <= 'z') || (begin >= 'A' && begin <= 'Z')) {
+                    int r = 0;
+                    for (; r < symbolTable.size(); ++r) {
+                        if (symbolTable.get(r).name.equals(symbol)) {
+                            break;
+                        }
+                    }
+                    if (r == symbolTable.size()) {
+                        System.out.println("Variable " + symbol + " is not defined.");
+                    } else {
+                        symbol = symbolTable.get(r).value;
+                    }
+                }
+                temp.add(symbol);
+            } else {
+                break;
+            }
+        }
+        symbolTable.get(i).value = String.valueOf(calculate(temp, tempVariableNumber, quaternionLists, quaternionNumber));
+        quaternionNumber = seqNum;
+        tempVariableNumber = numberOfTempVariables - 1;
+        quaternionLists.add(new QuaternionList(quaternionNumber++, "=", "T" + tempVariableNumber++, null, symbolTable.get(i).name));
     }
 
     private static void calculateArrayAssignment(int k) {
@@ -776,7 +810,9 @@ public class Grammer {
                     break;
                 }
             }
-            dopeVector.get(Integer.valueOf(symbolTable.get(t).value)).add(calculate(temp));
+            dopeVector.get(Integer.valueOf(symbolTable.get(t).value)).add(calculate(temp, tempVariableNumber, quaternionLists, quaternionNumber));
+            tempVariableNumber = numberOfTempVariables - 1;
+            quaternionNumber = seqNum;
             l = r;
         }
     }
