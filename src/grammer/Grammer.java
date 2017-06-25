@@ -607,7 +607,9 @@ public class Grammer {
         }
 
         System.out.println(analyseStack);
-        if (!canBeClear()) return false;
+        if (!canBeClear()) {
+            return false;
+        }
         return result;
     }
 
@@ -685,23 +687,31 @@ public class Grammer {
                 System.out.println("Variable \"" + value + "\" has not been defined.");
             } else {
                 if (kvMapArrayList.get(k + 1).value.equals("=")) {
-                    symbolTable.get(i).value = kvMapArrayList.get(k + 2).value;
+                    calculateSimpleVariableAssignment(k, i);
                 }
                 if (kvMapArrayList.get(k + 1).value.equals("[")) {
-                    int j = k + 2;
-                    for (; j < kvMapArrayList.size(); ++j) {
-                        if (kvMapArrayList.get(j).value.equals("]")) {
-                            break;
-                        } else {
-                            calIndex.add(kvMapArrayList.get(j).value);
-                        }
-                    }
-                    calIndex.add("$");
+                    calculateArrayAssignment(k);
                 }
             }
 
         }
         return input;
+    }
+
+    private static void calculateSimpleVariableAssignment(int k, int i) {
+        symbolTable.get(i).value = kvMapArrayList.get(k + 2).value;
+    }
+
+    private static void calculateArrayAssignment(int k) {
+        int j = k + 2;
+        for (; j < kvMapArrayList.size(); ++j) {
+            if (kvMapArrayList.get(j).value.equals("]")) {
+                break;
+            } else {
+                calIndex.add(kvMapArrayList.get(j).value);
+            }
+        }
+        calIndex.add("$");
     }
 
     private static void fillInSymbolTable(int k) {
@@ -780,7 +790,6 @@ public class Grammer {
             char begin = op.toCharArray()[0];
             op = handleVariablesInExp(op, begin);
             temp.add(op);
-            System.out.println(temp + "+++++++");
         }
         return r;
     }
@@ -877,7 +886,6 @@ public class Grammer {
                     } else {
                         System.out.println("Need \"" + top + "\" at line: " + line);
                     }
-
                     System.out.println(analyseStack);
                     return false;
             }

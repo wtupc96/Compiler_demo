@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="27cd02e9-8bcf-4943-92b7-6d270d9569b5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grammer/Grammer.java" afterPath="$PROJECT_DIR$/src/grammer/Grammer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -51,8 +52,8 @@
       <file leaf-file-name="Grammer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/grammer/Grammer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-894">
-              <caret line="780" column="17" lean-forward="false" selection-start-line="780" selection-start-column="17" selection-end-line="780" selection-end-column="17" />
+            <state relative-caret-position="1885">
+              <caret line="891" column="9" lean-forward="false" selection-start-line="891" selection-start-column="9" selection-end-line="891" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#init#0;class#Grammer#0" expanded="false" />
@@ -758,7 +759,7 @@
       <workItem from="1497453264905" duration="3450000" />
       <workItem from="1497945743007" duration="34000" />
       <workItem from="1498198637822" duration="22229000" />
-      <workItem from="1498374987755" duration="12642000" />
+      <workItem from="1498374987755" duration="12858000" />
     </task>
     <task id="LOCAL-00001" summary="Fix bugs.">
       <created>1497456598119</created>
@@ -795,11 +796,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498399161777</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Cleaned.">
+      <created>1498399182705</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1498399182705</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69199000" />
+    <option name="totallyTimeSpent" value="69415000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -865,7 +873,8 @@
     <MESSAGE value="Error detection." />
     <MESSAGE value="Ready." />
     <MESSAGE value="Symbol table." />
-    <option name="LAST_COMMIT_MESSAGE" value="Symbol table." />
+    <MESSAGE value="Cleaned." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1268,8 +1277,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grammer/Grammer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-894">
-          <caret line="780" column="17" lean-forward="false" selection-start-line="780" selection-start-column="17" selection-end-line="780" selection-end-column="17" />
+        <state relative-caret-position="1885">
+          <caret line="891" column="9" lean-forward="false" selection-start-line="891" selection-start-column="9" selection-end-line="891" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#init#0;class#Grammer#0" expanded="false" />
