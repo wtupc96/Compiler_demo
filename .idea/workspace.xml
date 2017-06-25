@@ -56,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/src/tools/CalculatePostfix.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="590">
-              <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+              <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/grammer/Grammar.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="279">
-              <caret line="815" column="58" lean-forward="false" selection-start-line="815" selection-start-column="58" selection-end-line="815" selection-end-column="58" />
+              <caret line="813" column="58" lean-forward="false" selection-start-line="813" selection-start-column="58" selection-end-line="813" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#init#0;class#Grammar#0" expanded="false" />
@@ -796,7 +796,7 @@
       <workItem from="1497453264905" duration="3450000" />
       <workItem from="1497945743007" duration="34000" />
       <workItem from="1498198637822" duration="22229000" />
-      <workItem from="1498374987755" duration="21525000" />
+      <workItem from="1498374987755" duration="21561000" />
     </task>
     <task id="LOCAL-00001" summary="Fix bugs.">
       <created>1497456598119</created>
@@ -847,11 +847,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498399398154</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Simple var assignment QUA.">
+      <created>1498408115497</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1498408115497</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78082000" />
+    <option name="totallyTimeSpent" value="78118000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -864,7 +871,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -919,7 +925,8 @@
     <MESSAGE value="Ready." />
     <MESSAGE value="Symbol table." />
     <MESSAGE value="Cleaned." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned." />
+    <MESSAGE value="Simple var assignment QUA." />
+    <option name="LAST_COMMIT_MESSAGE" value="Simple var assignment QUA." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1373,7 +1380,7 @@
     <entry file="file://$PROJECT_DIR$/src/tools/CalculatePostfix.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="590">
-          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+          <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1383,7 +1390,7 @@
     <entry file="file://$PROJECT_DIR$/src/grammer/Grammar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
-          <caret line="815" column="58" lean-forward="false" selection-start-line="815" selection-start-column="58" selection-end-line="815" selection-end-column="58" />
+          <caret line="813" column="58" lean-forward="false" selection-start-line="813" selection-start-column="58" selection-end-line="813" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#init#0;class#Grammar#0" expanded="false" />
