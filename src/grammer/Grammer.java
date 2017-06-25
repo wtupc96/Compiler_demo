@@ -1,11 +1,17 @@
 package grammer;
 
 import lexical.KVMap;
+import lexical.Scan;
+import semantic.QuaternionList;
+import semantic.TableItems;
 
 import java.util.ArrayList;
 import java.util.Stack;
 
 import static lexical.Scan.getResultList;
+import static lexical.Scan.input;
+import static semantic.Semantic.*;
+import static tools.CalculatePostfix.calculate;
 
 /**
  * Created by Administrator on 2017/6/14.
@@ -64,9 +70,21 @@ public class Grammer {
     private static final ArrayList<String> firstM = new ArrayList<>();
     private static final ArrayList<String> firstS = new ArrayList<>();
     private static final ArrayList<ArrayList<String>> firstSet = new ArrayList<>();
+    private static final ArrayList<String> calIndex = new ArrayList<>();
+    private static ArrayList<String> arrayIndex = new ArrayList<>();
     private static ArrayList<KVMap> kvMapArrayList;
+    private static ArrayList<TableItems> symbolTable;
+    private static ArrayList<QuaternionList> quaternionLists;
+    private static ArrayList<ArrayList<Integer>> dopeVector;
+    private static int listNumber = 0;
     private static int line = 0;
     private static boolean result = true;
+    private static int typeInTable;
+    private static boolean hasMoreArgs = false;
+
+    public static void setDopeVector() {
+        Grammer.dopeVector = getDopeVectorList();
+    }
 
     private static void init() {
         {
@@ -335,16 +353,32 @@ public class Grammer {
         }
     }
 
-//    public static void main(String[] args) {
-//        init();
-//        input("");
-//        Scan.handle();
-//        setKvMapArrayList();
-//        System.out.println(handle());
-//    }
+    public static void main(String[] args) {
+        init();
+        input("int a; a = 3;int ab[a+3+4,++2,--3,--3],c[1,2+3,4*--5];");
+        Scan.handle();
+        setKvMapArrayList();
+        setQuaternionLists();
+        setSymbolTable();
+        setDopeVector();
+        System.out.println(handle());
+        System.out.println(symbolTable);
+        System.out.println(symbolTable.size());
+        System.out.println(calIndex);
+        System.out.println(arrayIndex);
+        System.out.println(dopeVector);
+    }
 
     private static void setKvMapArrayList() {
         Grammer.kvMapArrayList = getResultList();
+    }
+
+    private static void setQuaternionLists() {
+        Grammer.quaternionLists = getQuaternions();
+    }
+
+    private static void setSymbolTable() {
+        Grammer.symbolTable = getSymbolTable();
     }
 
     private static boolean handle() {
@@ -355,72 +389,19 @@ public class Grammer {
             line = kvMapArrayList.get(k).row;
             switch (kvMapArrayList.get(k).classi) {
                 case "keyword":
-                    int type = kvMapArrayList.get(k).type;
-                    if (type >= 1 && type <= 4) {
-                        input = "class";
-                    } else {
-                        String value = kvMapArrayList.get(k).value;
-                        switch (value) {
-                            case "if":
-                            case "switch":
-                            case "else":
-                            case "case":
-                            case "while":
-                            case "do":
-                                input = value;
-                                break;
-                        }
-                    }
+                    input = handleKeyword(input, k);
                     break;
                 case "identifier":
-                    input = "identifier";
+                    input = handleIdentifier(k);
                     break;
                 case "constant":
-                    String value = kvMapArrayList.get(k).value;
-                    switch (value) {
-                        case "TRUE":
-                        case "FALSE":
-                            input = value;
-                            break;
-                        default:
-                            input = "constant";
-                    }
+                    input = handleConstant(k);
                     break;
                 case "operator":
-                    int type2 = kvMapArrayList.get(k).type;
-                    if (type2 >= 24 && type2 <= 29) {
-                        input = "rop";
-                    } else {
-                        String value2 = kvMapArrayList.get(k).value;
-                        switch (value2) {
-                            case "++":
-                            case "--":
-                            case "+":
-                            case "-":
-                            case "*":
-                            case "&":
-                            case "|":
-                            case "!":
-                            case "=":
-                                input = value2;
-                                break;
-                        }
-                    }
+                    input = handleOperator(input, k);
                     break;
                 case "bound":
-                    String value3 = kvMapArrayList.get(k).value;
-                    switch (value3) {
-                        case "[":
-                        case "]":
-                        case "(":
-                        case ")":
-                        case ":":
-                        case ";":
-                        case "}":
-                        case ",":
-                            input = value3;
-                            break;
-                    }
+                    input = handleDelimiter(input, k);
                     break;
             }
 
@@ -624,7 +605,239 @@ public class Grammer {
                 }
             }
         }
+
         System.out.println(analyseStack);
+        if (!canBeClear()) return false;
+        return result;
+    }
+
+    private static String handleDelimiter(String input, int k) {
+        String value3 = kvMapArrayList.get(k).value;
+        switch (value3) {
+            case "[":
+            case "]":
+            case "(":
+            case ")":
+            case ":":
+            case "}":
+            case ",":
+                input = value3;
+                break;
+            case ";":
+                hasMoreArgs = false;
+                input = value3;
+                break;
+        }
+        return input;
+    }
+
+    private static String handleOperator(String input, int k) {
+        int type2 = kvMapArrayList.get(k).type;
+        if (type2 >= 24 && type2 <= 29) {
+            input = "rop";
+        } else {
+            String value2 = kvMapArrayList.get(k).value;
+            switch (value2) {
+                case "++":
+                case "--":
+                case "+":
+                case "-":
+                case "*":
+                case "&":
+                case "|":
+                case "!":
+                case "=":
+                    input = value2;
+                    break;
+            }
+        }
+        return input;
+    }
+
+    private static String handleConstant(int k) {
+        String input;
+        String value = kvMapArrayList.get(k).value;
+        switch (value) {
+            case "TRUE":
+            case "FALSE":
+                input = value;
+                break;
+            default:
+                input = "constant";
+        }
+        return input;
+    }
+
+    private static String handleIdentifier(int k) {
+        String input;
+        input = "identifier";
+        if (hasMoreArgs) {
+            fillInSymbolTable(k);
+        } else if (k + 1 < kvMapArrayList.size()) {
+            int i = 0;
+            String value = kvMapArrayList.get(k).value;
+            for (; i < symbolTable.size(); ++i) {
+                if (symbolTable.get(i).name.equals(value)) {
+                    break;
+                }
+            }
+            if (i == symbolTable.size()) {
+                System.out.println("Variable \"" + value + "\" has not been defined.");
+            } else {
+                if (kvMapArrayList.get(k + 1).value.equals("=")) {
+                    symbolTable.get(i).value = kvMapArrayList.get(k + 2).value;
+                }
+                if (kvMapArrayList.get(k + 1).value.equals("[")) {
+                    int j = k + 2;
+                    for (; j < kvMapArrayList.size(); ++j) {
+                        if (kvMapArrayList.get(j).value.equals("]")) {
+                            break;
+                        } else {
+                            calIndex.add(kvMapArrayList.get(j).value);
+                        }
+                    }
+                    calIndex.add("$");
+                }
+            }
+
+        }
+        return input;
+    }
+
+    private static void fillInSymbolTable(int k) {
+        if (k + 1 < kvMapArrayList.size() && kvMapArrayList.get(k + 1).value.equals("[")) {
+            fillInArray(k);
+        } else {
+            fillInSimpleVariable(k);
+        }
+    }
+
+    private static void fillInSimpleVariable(int k) {
+        int i = 0;
+        String value = kvMapArrayList.get(k).value;
+        for (; i < symbolTable.size(); ++i) {
+            if (symbolTable.get(i).name.equals(value)) {
+                break;
+            }
+        }
+        if (i == symbolTable.size()) {
+            symbolTable.add(new TableItems(value, typeInTable, null));
+        } else if (i != symbolTable.size() - 1) {
+            System.out.println("Variable \"" + value + "\" has been defined.");
+        }
+    }
+
+    private static void fillInArray(int k) {
+        int i = 0;
+        String value = kvMapArrayList.get(k).value;
+        for (; i < symbolTable.size(); ++i) {
+            if (symbolTable.get(i).name.equals(value)) {
+                break;
+            }
+        }
+        if (i == symbolTable.size()) {
+            fillInANewArray(k, value);
+        } else if (i != symbolTable.size() - 1) {
+            System.out.println("Variable \"" + value + "\" has been defined.");
+        }
+    }
+
+    private static void fillInANewArray(int k, String value) {
+        symbolTable.add(new TableItems(value, typeInTable + 100, String.valueOf(listNumber++)));
+        fillInDopeVector(k, value);
+    }
+
+    private static void fillInDopeVector(int k, String value) {
+        dopeVector.add(new ArrayList<>());
+        int j = k + 2;
+        initializeEachDimension(j);
+        calculateDimensions(value);
+        arrayIndex = new ArrayList<>();
+    }
+
+    private static void calculateDimensions(String value) {
+        for (int l = 0; l < arrayIndex.size(); ++l) {
+            int r = l;
+            ArrayList<String> temp = new ArrayList<>();
+            r = calculateEachDimension(r, temp);
+            int t = 0;
+            for (; t < symbolTable.size(); ++t) {
+                if (symbolTable.get(t).name.equals(value)) {
+                    break;
+                }
+            }
+            dopeVector.get(Integer.valueOf(symbolTable.get(t).value)).add(calculate(temp));
+            l = r;
+        }
+    }
+
+    private static int calculateEachDimension(int r, ArrayList<String> temp) {
+        for (; r < arrayIndex.size(); ++r) {
+            if (arrayIndex.get(r).equals(",")) {
+                break;
+            }
+            String op = arrayIndex.get(r);
+            char begin = op.toCharArray()[0];
+            op = handleVariablesInExp(op, begin);
+            temp.add(op);
+            System.out.println(temp + "+++++++");
+        }
+        return r;
+    }
+
+    private static String handleVariablesInExp(String op, char begin) {
+        if ((begin >= 'a' && begin <= 'z') || (begin >= 'A' && begin <= 'Z')) {
+            int u = 0;
+            for (; u < symbolTable.size(); ++u) {
+                if (op.equals(symbolTable.get(u).name)) {
+                    TableItems item = symbolTable.get(u);
+                    if (item.value != null && item.type < 100) {
+                        op = item.value;
+                    }
+                    break;
+                }
+            }
+            if (u == symbolTable.size()) {
+                System.out.println("Variable \"" + op + "\" is not defined.");
+            }
+        }
+        return op;
+    }
+
+    private static void initializeEachDimension(int j) {
+        for (; j < kvMapArrayList.size(); ++j) {
+            if (kvMapArrayList.get(j).value.equals("]")) {
+                break;
+            } else {
+                arrayIndex.add(kvMapArrayList.get(j).value);
+            }
+        }
+        arrayIndex.add("$");
+    }
+
+    private static String handleKeyword(String input, int k) {
+        int type = kvMapArrayList.get(k).type;
+        if (type >= 1 && type <= 4) {
+            input = "class";
+            typeInTable = type;
+            hasMoreArgs = true;
+        } else {
+            String value = kvMapArrayList.get(k).value;
+            switch (value) {
+                case "if":
+                case "switch":
+                case "else":
+                case "case":
+                case "while":
+                case "do":
+                    input = value;
+                    break;
+            }
+        }
+        return input;
+    }
+
+    private static boolean canBeClear() {
         while (!analyseStack.empty()) {
             String top = analyseStack.pop();
             switch (top) {
@@ -669,6 +882,6 @@ public class Grammer {
                     return false;
             }
         }
-        return result;
+        return true;
     }
 }

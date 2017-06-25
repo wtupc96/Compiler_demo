@@ -4,13 +4,18 @@ package semantic;
  * Created by wtupc96 on 2017/6/23.
  */
 public class TableItems {
-    private String name;
-    private String type;
-    private String value;
+    public String name;
+    public int type;
+    public String value;
 
-    public TableItems(String name, String type, String value) {
+    public TableItems(String name, int type, String value) {
         this.name = name;
         this.type = type;
         this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return "(Name: " + name + ", Type: " + type + ", Value: " + value + ")";
     }
 }
