@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27cd02e9-8bcf-4943-92b7-6d270d9569b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/semantic/QuaternionList.java" afterPath="$PROJECT_DIR$/src/semantic/QuaternionList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tools/CalculatePostfix.java" afterPath="$PROJECT_DIR$/src/tools/CalculatePostfix.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/grammer/Grammer.java" afterPath="$PROJECT_DIR$/src/grammer/Grammar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grammer/Grammar.java" afterPath="$PROJECT_DIR$/src/grammer/Grammar.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -46,7 +43,10 @@
             <state relative-caret-position="288">
               <caret line="12" column="69" lean-forward="false" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
               <folding>
-                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="false" />
+                <element signature="e#571#572#0" expanded="false" />
+                <element signature="e#635#636#0" expanded="false" />
+                <element signature="e#669#670#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -55,8 +55,8 @@
       <file leaf-file-name="CalculatePostfix.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tools/CalculatePostfix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+            <state relative-caret-position="169">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,7 +67,7 @@
       <file leaf-file-name="QuaternionList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/semantic/QuaternionList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
+            <state relative-caret-position="528">
               <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
               <folding />
             </state>
@@ -77,18 +77,18 @@
       <file leaf-file-name="Grammar.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/grammer/Grammar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="813" column="58" lean-forward="false" selection-start-line="813" selection-start-column="58" selection-end-line="813" selection-end-column="58" />
+            <state relative-caret-position="-1559">
+              <caret line="360" column="67" lean-forward="false" selection-start-line="360" selection-start-column="67" selection-end-line="360" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#init#0;class#Grammar#0" expanded="false" />
+                <element signature="method#handle#0;class#Grammar#0" expanded="false" />
                 <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
                 <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
                 <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
                 <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
                 <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
                 <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
-                <element signature="method#fillInDopeVector#0;class#Grammar#0" expanded="false" />
                 <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
                 <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
                 <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
@@ -127,16 +127,17 @@
       <find>\+\+\+</find>
       <find>arrayIndex</find>
       <find>Assignment</find>
-      <find>numberOfTempVariables</find>
       <find>mai</find>
       <find>isAssignment</find>
       <find>handleIdentifier</find>
       <find>dentifier</find>
       <find>aNewOne</find>
       <find>isAss</find>
-      <find>tempVariableNumber</find>
-      <find>calculate</find>
       <find>cal</find>
+      <find>calculate</find>
+      <find>numberOfTempVariables</find>
+      <find>tempVariableNumber</find>
+      <find>j</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -283,8 +284,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -796,7 +797,8 @@
       <workItem from="1497453264905" duration="3450000" />
       <workItem from="1497945743007" duration="34000" />
       <workItem from="1498198637822" duration="22229000" />
-      <workItem from="1498374987755" duration="21561000" />
+      <workItem from="1498374987755" duration="21584000" />
+      <workItem from="1498484832568" duration="4461000" />
     </task>
     <task id="LOCAL-00001" summary="Fix bugs.">
       <created>1497456598119</created>
@@ -854,11 +856,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498408115497</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Cleaned.">
+      <created>1498408134613</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1498408134613</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78118000" />
+    <option name="totallyTimeSpent" value="82602000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -871,38 +880,39 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31536388" sideWeight="0.5028653" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.541779" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32614556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31536388" sideWeight="0.5028653" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23180594" sideWeight="0.49713466" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23315364" sideWeight="0.49713466" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1661891" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16762178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.541779" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -924,9 +934,9 @@
     <MESSAGE value="Error detection." />
     <MESSAGE value="Ready." />
     <MESSAGE value="Symbol table." />
-    <MESSAGE value="Cleaned." />
     <MESSAGE value="Simple var assignment QUA." />
-    <option name="LAST_COMMIT_MESSAGE" value="Simple var assignment QUA." />
+    <MESSAGE value="Cleaned." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -955,7 +965,7 @@
         <state relative-caret-position="5520">
           <caret line="230" column="40" lean-forward="false" selection-start-line="230" selection-start-column="40" selection-end-line="230" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -967,13 +977,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#init#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handle#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
-            <element signature="method#fillInDopeVector#0;class#Grammar#0" expanded="false" />
             <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
             <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
@@ -1004,7 +1014,7 @@
         <state relative-caret-position="5520">
           <caret line="230" column="40" lean-forward="false" selection-start-line="230" selection-start-column="40" selection-end-line="230" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1016,13 +1026,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#init#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handle#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
-            <element signature="method#fillInDopeVector#0;class#Grammar#0" expanded="false" />
             <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
             <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
@@ -1047,13 +1057,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#init#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handle#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
-            <element signature="method#fillInDopeVector#0;class#Grammar#0" expanded="false" />
             <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
             <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
@@ -1076,7 +1086,7 @@
         <state relative-caret-position="5520">
           <caret line="230" column="40" lean-forward="false" selection-start-line="230" selection-start-column="40" selection-end-line="230" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1096,13 +1106,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#init#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handle#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
-            <element signature="method#fillInDopeVector#0;class#Grammar#0" expanded="false" />
             <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
             <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
@@ -1125,7 +1135,7 @@
         <state relative-caret-position="5424">
           <caret line="230" column="40" lean-forward="false" selection-start-line="230" selection-start-column="40" selection-end-line="230" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1151,7 +1161,7 @@
         <state relative-caret-position="5400">
           <caret line="230" column="40" lean-forward="false" selection-start-line="230" selection-start-column="40" selection-end-line="230" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1163,13 +1173,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#init#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handle#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
-            <element signature="method#fillInDopeVector#0;class#Grammar#0" expanded="false" />
             <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
             <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
@@ -1192,7 +1202,7 @@
         <state relative-caret-position="10344">
           <caret line="434" column="20" lean-forward="false" selection-start-line="434" selection-start-column="20" selection-end-line="434" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1210,7 +1220,7 @@
         <state relative-caret-position="4584">
           <caret line="194" column="48" lean-forward="false" selection-start-line="194" selection-start-column="48" selection-end-line="194" selection-end-column="48" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1220,7 +1230,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1239,7 +1249,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1258,7 +1268,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1278,7 +1288,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1288,7 +1298,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1298,7 +1308,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1308,7 +1318,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1346,7 +1356,7 @@
         <state relative-caret-position="158">
           <caret line="235" column="34" lean-forward="false" selection-start-line="235" selection-start-column="34" selection-end-line="235" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1364,14 +1374,17 @@
         <state relative-caret-position="288">
           <caret line="12" column="69" lean-forward="false" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
           <folding>
-            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="false" />
+            <element signature="e#571#572#0" expanded="false" />
+            <element signature="e#635#636#0" expanded="false" />
+            <element signature="e#669#670#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/semantic/QuaternionList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
+        <state relative-caret-position="528">
           <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
           <folding />
         </state>
@@ -1379,8 +1392,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tools/CalculatePostfix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        <state relative-caret-position="169">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1389,18 +1402,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grammer/Grammar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="813" column="58" lean-forward="false" selection-start-line="813" selection-start-column="58" selection-end-line="813" selection-end-column="58" />
+        <state relative-caret-position="-1559">
+          <caret line="360" column="67" lean-forward="false" selection-start-line="360" selection-start-column="67" selection-end-line="360" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#init#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handle#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
-            <element signature="method#fillInDopeVector#0;class#Grammar#0" expanded="false" />
             <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
             <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
