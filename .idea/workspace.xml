@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27cd02e9-8bcf-4943-92b7-6d270d9569b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/front/ButtonPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/front/InputPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/front/MainFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front/ButtonPanel.java" afterPath="$PROJECT_DIR$/src/front/ButtonPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front/InputPanel.java" afterPath="$PROJECT_DIR$/src/front/InputPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grammer/Grammar.java" afterPath="$PROJECT_DIR$/src/grammer/Grammar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lexical/Scan.java" afterPath="$PROJECT_DIR$/src/lexical/Scan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/semantic/QuaternionList.java" afterPath="$PROJECT_DIR$/src/semantic/QuaternionList.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -82,35 +77,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Grammar.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Grammar.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/grammer/Grammar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3864">
-              <caret line="709" column="29" lean-forward="false" selection-start-line="709" selection-start-column="29" selection-end-line="709" selection-end-column="29" />
+            <state relative-caret-position="216">
+              <caret line="991" column="38" lean-forward="false" selection-start-line="991" selection-start-column="20" selection-end-line="991" selection-end-column="38" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#5111#5112#0" expanded="false" />
-                <element signature="e#5167#5168#0" expanded="false" />
                 <element signature="method#init#0;class#Grammar#0" expanded="false" />
-                <element signature="method#main#0;class#Grammar#0" expanded="false" />
-                <element signature="e#13927#13928#0" expanded="false" />
-                <element signature="e#13983#13984#0" expanded="false" />
-                <element signature="e#14031#14032#0" expanded="false" />
-                <element signature="e#14089#14090#0" expanded="false" />
-                <element signature="e#14133#14134#0" expanded="false" />
-                <element signature="e#14187#14188#0" expanded="false" />
-                <element signature="method#handle#0;class#Grammar#0" expanded="false" />
+                <element signature="e#14250#14251#0" expanded="true" />
+                <element signature="e#14306#14307#0" expanded="true" />
+                <element signature="method#identifyInput#0;class#Grammar#0" expanded="false" />
+                <element signature="method#handleDefineAndAssignment#0;class#Grammar#0" expanded="false" />
+                <element signature="method#handleDelimiter#0;class#Grammar#0" expanded="false" />
                 <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
                 <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
+                <element signature="method#handleIdentifier#0;class#Grammar#0" expanded="false" />
+                <element signature="method#calculateSimpleVariableAssignment#0;class#Grammar#0" expanded="false" />
+                <element signature="method#calculateArrayAssignment#0;class#Grammar#0" expanded="false" />
                 <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
                 <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
                 <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
                 <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
+                <element signature="method#fillInDopeVector#0;class#Grammar#0" expanded="false" />
+                <element signature="method#calculateDimensions#0;class#Grammar#0" expanded="false" />
                 <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
                 <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
                 <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
                 <element signature="method#handleKeyword#0;class#Grammar#0" expanded="false" />
-                <element signature="method#canBeClear#0;class#Grammar#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -119,22 +112,22 @@
       <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/front/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="0">
+              <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#291#292#0" expanded="true" />
-                <element signature="e#338#339#0" expanded="true" />
+                <element signature="e#585#586#0" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ButtonPanel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ButtonPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/front/ButtonPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="35" column="58" lean-forward="false" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+            <state relative-caret-position="331">
+              <caret line="61" column="53" lean-forward="false" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,10 +138,13 @@
       <file leaf-file-name="InputPanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/front/InputPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+            <state relative-caret-position="264">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
-                <element signature="e#343#344#0" expanded="true" />
+                <element signature="e#455#456#0" expanded="true" />
+                <element signature="e#487#488#0" expanded="true" />
+                <element signature="e#1230#1231#0" expanded="true" />
+                <element signature="e#1262#1263#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,18 +153,14 @@
       <file leaf-file-name="Scan.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lexical/Scan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="237" column="21" lean-forward="false" selection-start-line="237" selection-start-column="21" selection-end-line="237" selection-end-column="21" />
+            <state relative-caret-position="-19">
+              <caret line="213" column="128" lean-forward="false" selection-start-line="213" selection-start-column="128" selection-end-line="213" selection-end-column="128" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#645#646#0" expanded="false" />
-                <element signature="e#678#679#0" expanded="false" />
-                <element signature="e#723#724#0" expanded="false" />
-                <element signature="e#764#765#0" expanded="false" />
+                <element signature="e#769#770#0" expanded="true" />
+                <element signature="e#810#811#0" expanded="true" />
                 <element signature="method#handle#0;class#Scan#0" expanded="false" />
                 <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
                 <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-                <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
                 <element signature="method#getClass#0;class#Scan#0" expanded="false" />
               </folding>
             </state>
@@ -214,6 +206,7 @@
       <find>numberOfTempVariables</find>
       <find>tempVariableNumber</find>
       <find>j</find>
+      <find>System.out.println</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -241,12 +234,12 @@
         <option value="$PROJECT_DIR$/src/semantic/Semantic.java" />
         <option value="$PROJECT_DIR$/src/grammer/Grammer.java" />
         <option value="$PROJECT_DIR$/src/tools/CalculatePostfix.java" />
-        <option value="$PROJECT_DIR$/src/lexical/Scan.java" />
         <option value="$PROJECT_DIR$/src/semantic/QuaternionList.java" />
-        <option value="$PROJECT_DIR$/src/grammer/Grammar.java" />
-        <option value="$PROJECT_DIR$/src/front/InputPanel.java" />
         <option value="$PROJECT_DIR$/src/front/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/lexical/Scan.java" />
+        <option value="$PROJECT_DIR$/src/front/InputPanel.java" />
         <option value="$PROJECT_DIR$/src/front/ButtonPanel.java" />
+        <option value="$PROJECT_DIR$/src/grammer/Grammar.java" />
       </list>
     </option>
   </component>
@@ -895,8 +888,8 @@
     <recent_temporary>
       <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Application.MainFrame" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Grammar" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Scan" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Scan" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Grammar" />
         <item index="3" class="java.lang.String" itemvalue="Application.CalculatePostfix" />
       </list>
     </recent_temporary>
@@ -936,7 +929,7 @@
       <workItem from="1500359430835" duration="326000" />
       <workItem from="1500360101937" duration="758000" />
       <workItem from="1500361935679" duration="698000" />
-      <workItem from="1500363959634" duration="4258000" />
+      <workItem from="1500363959634" duration="8740000" />
     </task>
     <task id="LOCAL-00001" summary="Fix bugs.">
       <created>1497456598119</created>
@@ -1008,11 +1001,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498489377467</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Front end begins.">
+      <created>1500368559630</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1500368559630</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92532000" />
+    <option name="totallyTimeSpent" value="97014000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1025,18 +1025,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32614556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32543445" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31536388" sideWeight="0.5028653" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30331755" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30331755" sideWeight="0.49713466" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30331755" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1081,14 +1082,15 @@
     <MESSAGE value="Simple var assignment QUA." />
     <MESSAGE value="Cleaned." />
     <MESSAGE value="Array variables assignment." />
-    <option name="LAST_COMMIT_MESSAGE" value="Array variables assignment." />
+    <MESSAGE value="Front end begins." />
+    <option name="LAST_COMMIT_MESSAGE" value="Front end begins." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="25" />
+      <option name="time" value="26" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1097,17 +1099,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/lexical/KVMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/grammer/Step.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1116,15 +1112,11 @@
         <state relative-caret-position="5520">
           <caret line="230" column="40" lean-forward="false" selection-start-line="230" selection-start-column="40" selection-end-line="230" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
             <element signature="method#handle#0;class#Scan#0" expanded="false" />
             <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
             <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
             <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
@@ -1135,29 +1127,27 @@
         <state relative-caret-position="4656">
           <caret line="194" column="32" lean-forward="false" selection-start-line="194" selection-start-column="32" selection-end-line="194" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5111#5112#0" expanded="false" />
-            <element signature="e#5167#5168#0" expanded="false" />
             <element signature="method#init#0;class#Grammar#0" expanded="false" />
-            <element signature="method#main#0;class#Grammar#0" expanded="false" />
-            <element signature="e#13927#13928#0" expanded="false" />
-            <element signature="e#13983#13984#0" expanded="false" />
-            <element signature="e#14031#14032#0" expanded="false" />
-            <element signature="e#14089#14090#0" expanded="false" />
-            <element signature="e#14133#14134#0" expanded="false" />
-            <element signature="e#14187#14188#0" expanded="false" />
-            <element signature="method#handle#0;class#Grammar#0" expanded="false" />
+            <element signature="e#14250#14251#0" expanded="true" />
+            <element signature="e#14306#14307#0" expanded="true" />
+            <element signature="method#identifyInput#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleDefineAndAssignment#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleDelimiter#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleIdentifier#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateSimpleVariableAssignment#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateArrayAssignment#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
+            <element signature="method#fillInDopeVector#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateDimensions#0;class#Grammar#0" expanded="false" />
             <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
             <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleKeyword#0;class#Grammar#0" expanded="false" />
-            <element signature="method#canBeClear#0;class#Grammar#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1166,6 +1156,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1174,29 +1165,27 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5111#5112#0" expanded="false" />
-            <element signature="e#5167#5168#0" expanded="false" />
             <element signature="method#init#0;class#Grammar#0" expanded="false" />
-            <element signature="method#main#0;class#Grammar#0" expanded="false" />
-            <element signature="e#13927#13928#0" expanded="false" />
-            <element signature="e#13983#13984#0" expanded="false" />
-            <element signature="e#14031#14032#0" expanded="false" />
-            <element signature="e#14089#14090#0" expanded="false" />
-            <element signature="e#14133#14134#0" expanded="false" />
-            <element signature="e#14187#14188#0" expanded="false" />
-            <element signature="method#handle#0;class#Grammar#0" expanded="false" />
+            <element signature="e#14250#14251#0" expanded="true" />
+            <element signature="e#14306#14307#0" expanded="true" />
+            <element signature="method#identifyInput#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleDefineAndAssignment#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleDelimiter#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleIdentifier#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateSimpleVariableAssignment#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateArrayAssignment#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
+            <element signature="method#fillInDopeVector#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateDimensions#0;class#Grammar#0" expanded="false" />
             <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
             <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleKeyword#0;class#Grammar#0" expanded="false" />
-            <element signature="method#canBeClear#0;class#Grammar#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1205,6 +1194,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,15 +1203,11 @@
         <state relative-caret-position="5520">
           <caret line="230" column="40" lean-forward="false" selection-start-line="230" selection-start-column="40" selection-end-line="230" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
             <element signature="method#handle#0;class#Scan#0" expanded="false" />
             <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
             <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
             <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
@@ -1231,6 +1217,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1239,29 +1226,27 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5111#5112#0" expanded="false" />
-            <element signature="e#5167#5168#0" expanded="false" />
             <element signature="method#init#0;class#Grammar#0" expanded="false" />
-            <element signature="method#main#0;class#Grammar#0" expanded="false" />
-            <element signature="e#13927#13928#0" expanded="false" />
-            <element signature="e#13983#13984#0" expanded="false" />
-            <element signature="e#14031#14032#0" expanded="false" />
-            <element signature="e#14089#14090#0" expanded="false" />
-            <element signature="e#14133#14134#0" expanded="false" />
-            <element signature="e#14187#14188#0" expanded="false" />
-            <element signature="method#handle#0;class#Grammar#0" expanded="false" />
+            <element signature="e#14250#14251#0" expanded="true" />
+            <element signature="e#14306#14307#0" expanded="true" />
+            <element signature="method#identifyInput#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleDefineAndAssignment#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleDelimiter#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleIdentifier#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateSimpleVariableAssignment#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateArrayAssignment#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
+            <element signature="method#fillInDopeVector#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateDimensions#0;class#Grammar#0" expanded="false" />
             <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
             <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleKeyword#0;class#Grammar#0" expanded="false" />
-            <element signature="method#canBeClear#0;class#Grammar#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1270,6 +1255,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1278,15 +1264,11 @@
         <state relative-caret-position="5424">
           <caret line="230" column="40" lean-forward="false" selection-start-line="230" selection-start-column="40" selection-end-line="230" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
             <element signature="method#handle#0;class#Scan#0" expanded="false" />
             <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
             <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
             <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
@@ -1296,6 +1278,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1303,6 +1286,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1311,15 +1295,11 @@
         <state relative-caret-position="5400">
           <caret line="230" column="40" lean-forward="false" selection-start-line="230" selection-start-column="40" selection-end-line="230" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
             <element signature="method#handle#0;class#Scan#0" expanded="false" />
             <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
             <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
             <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
@@ -1330,29 +1310,27 @@
         <state relative-caret-position="5232">
           <caret line="218" column="21" lean-forward="false" selection-start-line="218" selection-start-column="21" selection-end-line="218" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5111#5112#0" expanded="false" />
-            <element signature="e#5167#5168#0" expanded="false" />
             <element signature="method#init#0;class#Grammar#0" expanded="false" />
-            <element signature="method#main#0;class#Grammar#0" expanded="false" />
-            <element signature="e#13927#13928#0" expanded="false" />
-            <element signature="e#13983#13984#0" expanded="false" />
-            <element signature="e#14031#14032#0" expanded="false" />
-            <element signature="e#14089#14090#0" expanded="false" />
-            <element signature="e#14133#14134#0" expanded="false" />
-            <element signature="e#14187#14188#0" expanded="false" />
-            <element signature="method#handle#0;class#Grammar#0" expanded="false" />
+            <element signature="e#14250#14251#0" expanded="true" />
+            <element signature="e#14306#14307#0" expanded="true" />
+            <element signature="method#identifyInput#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleDefineAndAssignment#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleDelimiter#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleIdentifier#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateSimpleVariableAssignment#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateArrayAssignment#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
             <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
+            <element signature="method#fillInDopeVector#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateDimensions#0;class#Grammar#0" expanded="false" />
             <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
             <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
             <element signature="method#handleKeyword#0;class#Grammar#0" expanded="false" />
-            <element signature="method#canBeClear#0;class#Grammar#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1361,6 +1339,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,15 +1348,11 @@
         <state relative-caret-position="10344">
           <caret line="434" column="20" lean-forward="false" selection-start-line="434" selection-start-column="20" selection-end-line="434" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
             <element signature="method#handle#0;class#Scan#0" expanded="false" />
             <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
             <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
             <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
@@ -1387,6 +1362,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1395,15 +1371,11 @@
         <state relative-caret-position="4584">
           <caret line="194" column="48" lean-forward="false" selection-start-line="194" selection-start-column="48" selection-end-line="194" selection-end-column="48" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
             <element signature="method#handle#0;class#Scan#0" expanded="false" />
             <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
             <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
             <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
@@ -1414,15 +1386,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
             <element signature="method#handle#0;class#Scan#0" expanded="false" />
             <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
             <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
             <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
@@ -1432,6 +1400,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1441,15 +1410,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
             <element signature="method#handle#0;class#Scan#0" expanded="false" />
             <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
             <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
             <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
@@ -1459,6 +1424,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1468,15 +1434,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
             <element signature="method#handle#0;class#Scan#0" expanded="false" />
             <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
             <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
             <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
@@ -1486,6 +1448,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1496,15 +1459,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
             <element signature="method#handle#0;class#Scan#0" expanded="false" />
             <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
             <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
             <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
@@ -1515,15 +1474,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
             <element signature="method#handle#0;class#Scan#0" expanded="false" />
             <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
             <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
             <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
@@ -1534,15 +1489,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
             <element signature="method#handle#0;class#Scan#0" expanded="false" />
             <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
             <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
             <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
@@ -1553,15 +1504,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
             <element signature="method#handle#0;class#Scan#0" expanded="false" />
             <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
             <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
             <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
@@ -1581,6 +1528,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1588,6 +1536,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1597,6 +1546,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1631,85 +1581,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lexical/Scan.java">
+    <entry file="file://$PROJECT_DIR$/src/front/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="237" column="21" lean-forward="false" selection-start-line="237" selection-start-column="21" selection-end-line="237" selection-end-column="21" />
+        <state relative-caret-position="0">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
-            <element signature="method#handle#0;class#Scan#0" expanded="false" />
-            <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
-            <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
-            <element signature="method#printLexicalResult#0;class#Scan#0" expanded="false" />
-            <element signature="method#getClass#0;class#Scan#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/grammer/Grammar.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/awt/event/ActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3864">
-          <caret line="709" column="29" lean-forward="false" selection-start-line="709" selection-start-column="29" selection-end-line="709" selection-end-column="29" />
+        <state relative-caret-position="182">
+          <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lexical/Scan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="213" column="128" lean-forward="false" selection-start-line="213" selection-start-column="128" selection-end-line="213" selection-end-column="128" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5111#5112#0" expanded="false" />
-            <element signature="e#5167#5168#0" expanded="false" />
-            <element signature="method#init#0;class#Grammar#0" expanded="false" />
-            <element signature="method#main#0;class#Grammar#0" expanded="false" />
-            <element signature="e#13927#13928#0" expanded="false" />
-            <element signature="e#13983#13984#0" expanded="false" />
-            <element signature="e#14031#14032#0" expanded="false" />
-            <element signature="e#14089#14090#0" expanded="false" />
-            <element signature="e#14133#14134#0" expanded="false" />
-            <element signature="e#14187#14188#0" expanded="false" />
-            <element signature="method#handle#0;class#Grammar#0" expanded="false" />
-            <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
-            <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
-            <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
-            <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
-            <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
-            <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
-            <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
-            <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
-            <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
-            <element signature="method#handleKeyword#0;class#Grammar#0" expanded="false" />
-            <element signature="method#canBeClear#0;class#Grammar#0" expanded="false" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="method#handle#0;class#Scan#0" expanded="false" />
+            <element signature="method#handleNumberOrMinus#0;class#Scan#0" expanded="false" />
+            <element signature="method#handleStartWithAlphabetic#0;class#Scan#0" expanded="false" />
+            <element signature="method#getClass#0;class#Scan#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/front/InputPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        <state relative-caret-position="264">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <element signature="e#343#344#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/front/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#1230#1231#0" expanded="true" />
+            <element signature="e#1262#1263#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/front/ButtonPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="35" column="58" lean-forward="false" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+        <state relative-caret-position="331">
+          <caret line="61" column="53" lean-forward="false" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grammer/Grammar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="991" column="38" lean-forward="false" selection-start-line="991" selection-start-column="20" selection-end-line="991" selection-end-column="38" />
+          <folding>
+            <element signature="method#init#0;class#Grammar#0" expanded="false" />
+            <element signature="e#14250#14251#0" expanded="true" />
+            <element signature="e#14306#14307#0" expanded="true" />
+            <element signature="method#identifyInput#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleDefineAndAssignment#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleDelimiter#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleOperator#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleConstant#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleIdentifier#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateSimpleVariableAssignment#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateArrayAssignment#0;class#Grammar#0" expanded="false" />
+            <element signature="method#fillInSymbolTable#0;class#Grammar#0" expanded="false" />
+            <element signature="method#fillInSimpleVariable#0;class#Grammar#0" expanded="false" />
+            <element signature="method#fillInArray#0;class#Grammar#0" expanded="false" />
+            <element signature="method#fillInANewArray#0;class#Grammar#0" expanded="false" />
+            <element signature="method#fillInDopeVector#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateDimensions#0;class#Grammar#0" expanded="false" />
+            <element signature="method#calculateEachDimension#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleVariablesInExp#0;class#Grammar#0" expanded="false" />
+            <element signature="method#initializeEachDimension#0;class#Grammar#0" expanded="false" />
+            <element signature="method#handleKeyword#0;class#Grammar#0" expanded="false" />
           </folding>
         </state>
       </provider>

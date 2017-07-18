@@ -83,7 +83,7 @@ public class Grammar {
     private static boolean result = true;
     private static int typeInTable;
     private static boolean hasMoreArgs = false;
-
+    private static String grammarResult = "";
 
     private static void setDopeVector() {
         Grammar.dopeVector = getDopeVectorList();
@@ -356,6 +356,18 @@ public class Grammar {
         }
     }
 
+    public static String grammarAnalysis(String arg) {
+        init();
+        input(arg);
+        Scan.handle();
+        setKvMapArrayList();
+        setQuaternionLists();
+        setSymbolTable();
+        setDopeVector();
+        handle();
+        return grammarResult;
+    }
+
     public static void main(String[] args) {
         init();
         input("int a[100,200,300,400],b;\n" +
@@ -391,6 +403,7 @@ public class Grammar {
         analyseStack.push("V");
         String input = "";
         for (int k = 0; k < kvMapArrayList.size(); ) {
+            grammarResult += analyseStack + "\n";
             System.out.println(analyseStack);
             line = kvMapArrayList.get(k).row;
             input = identifyInput(input, k);
@@ -440,11 +453,14 @@ public class Grammar {
                             case "case":
                             case "++":
                             case "--":
+                                grammarResult += "Need \"" + top + "\" at line: " + line + "\n";
                                 System.out.println("Need \"" + top + "\" at line: " + line);
                         }
                     } else if (Character.isUpperCase(top.toCharArray()[0])) {
+                        grammarResult += "Need \"" + firstSet.get(top.toCharArray()[0] - 'A') + "\" at line: " + line + "\n";
                         System.out.println("Need \"" + firstSet.get(top.toCharArray()[0] - 'A') + "\" at line: " + line);
                     } else {
+                        grammarResult += "Need \"" + top + "\" at line: " + line + "\n";
                         System.out.println("Need \"" + top + "\" at line: " + line);
                     }
                     if (analyseStack.empty()) {
@@ -526,6 +542,7 @@ public class Grammar {
                                     analyseStack.pop();
                                 } else {
                                     result = false;
+                                    grammarResult += "Need \"" + over + "\" at line: " + line + "\n";
                                     System.out.println("Need \"" + over + "\" at line: " + line);
                                     if (!analyseStack.empty()) {
                                         analyseStack.pop();
@@ -536,6 +553,7 @@ public class Grammar {
                             } else if (kvMapArrayList.get(k).value.equals(over)) {
                                 analyseStack.pop();
                             } else {
+                                grammarResult += "Need \"" + over + "\" at line: " + line + "\n";
                                 System.out.println("Need \"" + over + "\" at line: " + line);
                                 result = false;
                                 if (!analyseStack.empty()) {
@@ -552,6 +570,7 @@ public class Grammar {
                                 handleDefineAndAssignment(k);
                             } else {
                                 result = false;
+                                grammarResult += "Not an identifier!\n";
                                 System.out.println("Not an identifier!");
                                 if (!analyseStack.empty()) {
                                     analyseStack.pop();
@@ -566,6 +585,7 @@ public class Grammar {
                                 analyseStack.pop();
                             } else {
                                 result = false;
+                                grammarResult += "Not a constant!\n";
                                 System.out.println("Not a constant!");
                                 if (!analyseStack.empty()) {
                                     analyseStack.pop();
@@ -580,6 +600,7 @@ public class Grammar {
                                 analyseStack.pop();
                             } else {
                                 result = false;
+                                grammarResult += "Not a class!\n";
                                 System.out.println("Not a class!");
                                 if (!analyseStack.empty()) {
                                     analyseStack.pop();
@@ -596,6 +617,7 @@ public class Grammar {
             }
         }
 
+        grammarResult += analyseStack + "\n";
         System.out.println(analyseStack);
         if (!canBeClear()) {
             return false;
@@ -636,6 +658,7 @@ public class Grammar {
                 }
             }
             if (i == symbolTable.size()) {
+                grammarResult += "Variable \"" + value + "\" has not been defined.\n";
                 System.out.println("Variable \"" + value + "\" has not been defined.");
             } else {
                 if (kvMapArrayList.get(k + 1).value.equals("=")) {
@@ -725,6 +748,7 @@ public class Grammar {
                         }
                     }
                     if (r == symbolTable.size()) {
+                        grammarResult += "Variable " + symbol + " is not defined.\n";
                         System.out.println("Variable " + symbol + " is not defined.");
                     } else {
                         symbol = symbolTable.get(r).value;
@@ -803,6 +827,7 @@ public class Grammar {
         if (i == symbolTable.size()) {
             symbolTable.add(new TableItems(value, typeInTable, null));
         } else if (i != symbolTable.size() - 1) {
+            grammarResult += "Variable \"" + value + "\" has been defined.\n";
             System.out.println("Variable \"" + value + "\" has been defined.");
         }
     }
@@ -818,6 +843,7 @@ public class Grammar {
         if (i == symbolTable.size()) {
             fillInANewArray(k, value);
         } else if (i != symbolTable.size() - 1) {
+            grammarResult += "Variable \"" + value + "\" has been defined.\n";
             System.out.println("Variable \"" + value + "\" has been defined.");
         }
     }
@@ -877,6 +903,7 @@ public class Grammar {
                 }
             }
             if (u == symbolTable.size()) {
+                grammarResult += "Variable \"" + op + "\" is not defined.\n";
                 System.out.println("Variable \"" + op + "\" is not defined.");
             }
         }
@@ -927,6 +954,7 @@ public class Grammar {
                 case "N":
                 case "P":
                 case "V":
+                    grammarResult += analyseStack + "\n";
                     System.out.println(analyseStack);
                     break;
                 default:
@@ -946,16 +974,21 @@ public class Grammar {
                             case "case":
                             case "++":
                             case "--":
+                                grammarResult += "Need \"" + top + "\" at line: " + line + "\n";
                                 System.out.println("Need \"" + top + "\" at line: " + line);
                                 break;
                             case "rop":
+                                grammarResult += "Need a relation operator at line: " + line + "\n";
                                 System.out.println("Need a relation operator at line: " + line);
                         }
                     } else if (Character.isUpperCase(top.toCharArray()[0])) {
+                        grammarResult += "Need \"" + firstSet.get(top.toCharArray()[0] - 'A') + "\" at line: " + line + "\n";
                         System.out.println("Need \"" + firstSet.get(top.toCharArray()[0] - 'A') + "\" at line: " + line);
                     } else {
+                        grammarResult += "Need \"" + top + "\" at line: " + line + "\n";
                         System.out.println("Need \"" + top + "\" at line: " + line);
                     }
+                    grammarResult += analyseStack + "\n";
                     System.out.println(analyseStack);
                     return false;
             }

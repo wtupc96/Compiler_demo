@@ -14,6 +14,7 @@ public class Scan {
     private static int type = -1;
     private static int row = 1;
     private static boolean result = true;
+    private static String lexicalResult = "";
 
     public static ArrayList<KVMap> getResultList() {
         return resultList;
@@ -209,6 +210,7 @@ public class Scan {
 
     public static void printLexicalResult() {
         for (KVMap element : resultList) {
+            lexicalResult += "Row number: " + element.row + "  < " + element.type + ", " + element.value + ", " + element.classi + " >\n";
             System.out.println("Row number: " + element.row + "  < " + element.type + ", " + element.value + ", " + element.classi + " >");
         }
     }
@@ -238,6 +240,14 @@ public class Scan {
                 "a[11, 22, 33, 44] = 1 * b + 3 + (++0);");
         System.out.println(handle());
         printLexicalResult();
+    }
+
+    public static String lexicalAnalysis(String arg) {
+        input(arg);
+        System.out.println(handle());
+        printLexicalResult();
+        System.out.println(lexicalResult);
+        return lexicalResult;
     }
 
 }

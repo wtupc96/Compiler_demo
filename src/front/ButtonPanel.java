@@ -1,5 +1,7 @@
 package front;
 
+import lexical.Scan;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -17,12 +19,13 @@ public class ButtonPanel extends JPanel {
     private static Button lexicalButton = new Button("Lexical Analysis");
     private static Button grammarButton = new Button("Grammar Analysis");
     private static Button semanticButton = new Button("Semantic Analysis");
-    private static JTextArea area;
+    private static JTextArea area, result;
     private static JFileChooser jFileChooser = new JFileChooser();
     private static String path = "";
 
     public ButtonPanel() {
         area = InputPanel.getInputArea();
+        result = InputPanel.getTextField();
         setLayout(new GridLayout(1, 3, 5, 5));
         readFromFile.addActionListener(new ActionListener() {
             @Override
@@ -45,6 +48,21 @@ public class ButtonPanel extends JPanel {
                 }
             }
         });
+        lexicalButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                result.setText("");
+                result.setText(Scan.lexicalAnalysis(area.getText()));
+            }
+        });
+        grammarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                result.setText("");
+                Scan.lexicalAnalysis(area.getText());
+            }
+        });
+
         add(readFromFile);
         add(lexicalButton);
         add(grammarButton);
