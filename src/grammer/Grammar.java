@@ -358,7 +358,9 @@ public class Grammar {
 
     public static void main(String[] args) {
         init();
-        input("int a[100,200,300,400],b; a[11,22,33,44]=1*2+3+(++0);");
+        input("int a[100,200,300,400],b;\n" +
+                "b = 1;\n" +
+                "a[11, 22, 33, 44] = 1 * b + 3 + (++0);");
         Scan.handle();
         setKvMapArrayList();
         setQuaternionLists();
@@ -706,7 +708,6 @@ public class Grammar {
     private static String handleIdentifier(int k) {
         String input;
         input = "identifier";
-
         return input;
     }
 

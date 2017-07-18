@@ -233,7 +233,9 @@ public class Scan {
     }
 
     public static void main(String[] args) {
-        input("while(a != b) do {x = y;}");
+        input("int a[100,200,300,400],b;\n" +
+                "b = 1;\n" +
+                "a[11, 22, 33, 44] = 1 * b + 3 + (++0);");
         System.out.println(handle());
         printLexicalResult();
     }

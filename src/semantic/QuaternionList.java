@@ -22,4 +22,5 @@ public class QuaternionList {
     public String toString() {
         return sequentialNumber + ": (Condition: " + condition + ", First: " + firstOperator + ", Second: " + secondOperator + ", Address: " + addr + ")";
     }
+
 }
