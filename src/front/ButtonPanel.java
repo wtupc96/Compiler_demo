@@ -1,5 +1,6 @@
 package front;
 
+import grammer.Grammar;
 import lexical.Scan;
 
 import javax.swing.*;
@@ -52,6 +53,7 @@ public class ButtonPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 result.setText("");
+                System.out.println(area.getText());
                 result.setText(Scan.lexicalAnalysis(area.getText()));
             }
         });
@@ -59,7 +61,7 @@ public class ButtonPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 result.setText("");
-                Scan.lexicalAnalysis(area.getText());
+                result.setText(Grammar.grammarAnalysis(area.getText()));
             }
         });
 

@@ -243,6 +243,7 @@ public class Scan {
     }
 
     public static String lexicalAnalysis(String arg) {
+        lexicalResult = "";
         input(arg);
         System.out.println(handle());
         printLexicalResult();

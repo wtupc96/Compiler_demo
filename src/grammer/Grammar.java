@@ -357,6 +357,7 @@ public class Grammar {
     }
 
     public static String grammarAnalysis(String arg) {
+        grammarResult = "";
         init();
         input(arg);
         Scan.handle();
